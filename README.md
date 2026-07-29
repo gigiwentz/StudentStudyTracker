@@ -1,5 +1,7 @@
 # StudentStudyTracker
 A public file of a group project completed for a software engineering class I took at UCSD. 
+
+
 #when writing this, I referenced documentation at https://mermaid.js.org/intro/syntax-reference.html
 
 ## Architecture
