@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Clock – Study Progress</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <h1 class="title">⏱ Student Clock</h1>
+      <div class="remaining-card">
+        <span class="remaining-label">Study hours left this week</span>
+        <span class="remaining-value" id="studyHoursRemaining">--:--</span>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="card card-add">
+        <h2 class="card-title">Add assignment</h2>
+        <div class="row">
+          <input type="text" id="newAssignmentName" placeholder="e.g. PA1, Lab 2" class="input" />
+          <button type="button" id="addAssignmentBtn" class="btn btn-primary">Add</button>
+        </div>
+      </section>
+
+      <section class="card card-log">
+        <h2 class="card-title">Log work time</h2>
+        <div class="form-group">
+          <label for="assignmentSelect">Assignment</label>
+          <select id="assignmentSelect" class="input">
+            <option value="">— Select —</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="minutesInput">Minutes</label>
+          <input type="number" id="minutesInput" class="input" min="1" max="999" value="30" />
+        </div>
+        <button type="button" id="logWorkBtn" class="btn btn-accent">Log work</button>
+      </section>
+
+      <section class="card card-progress">
+        <h2 class="card-title">Progress by assignment</h2>
+        <p class="placeholder" id="progressPlaceholder">No assignments yet. Add one above.</p>
+        <ul class="progress-list" id="progressList"></ul>
+      </section>
+    </main>
+  </div>
+  <script type="module" src="/main.js"></script>
+</body>
+</html>
